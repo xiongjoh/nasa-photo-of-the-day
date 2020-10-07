@@ -7,7 +7,13 @@ const myKey = '5WwmxoufDLmWvQcaVXlKGhEoncVjMVLu6iP0ddKn'
 const demoKey = 'DEMO_KEY'
 
 function App() {
+
 const [nasaData, setNasaData] = useState({})
+const [date, setDate] = useState(null)
+
+const selectDate = () => {
+  
+}
 
 useEffect(() => {
 
@@ -24,6 +30,8 @@ useEffect(() => {
 
   fetchNasaData()
 }, [])
+
+useEffect(() => {}, [date])
 
   return (
     
