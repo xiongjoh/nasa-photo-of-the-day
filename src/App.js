@@ -4,17 +4,18 @@ import "./App.css";
 import NasaDetail from "./components/NasaDetail"
 
 const myKey = '5WwmxoufDLmWvQcaVXlKGhEoncVjMVLu6iP0ddKn'
+const demoKey = 'DEMO_KEY'
 
 function App() {
 const [nasaData, setNasaData] = useState({})
 
 useEffect(() => {
-  // console.log('fetching')
+
   const fetchNasaData = () => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=${myKey}`)
     .then(res => {
-      console.log(res.data)
       setNasaData(res.data)
+      console.log(res.data)
     })
     .catch(err => {
       debugger
@@ -25,12 +26,13 @@ useEffect(() => {
 }, [])
 
   return (
+    
     <div className="App">
-      <NasaDetail url={nasaData.url} title={nasaData.title} explanation={nasaData.explanation} date={nasaData.date} author={nasaData.copyright}/>
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
+      <NasaDetail url={nasaData.url} title={nasaData.title} explanation={nasaData.explanation} date={nasaData.date} author={nasaData.copyright}/>
     </div>
   );
 }
