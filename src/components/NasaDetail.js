@@ -7,9 +7,10 @@ const StyledDetails = styled.div`
   align-content: center;
   width: 50%;
   margin: auto;
-  box-shadow: 0 0 15px rgb(210, 210, 210);
+  box-shadow: ${pr => pr.theme.boxShadow};
   border-radius: 2%;
   padding: 2% 1%;
+  color: ${pr => pr.theme.textColor};
 
   img {
     width: 90%;
@@ -17,11 +18,9 @@ const StyledDetails = styled.div`
   }
 `;
 
-export default function NasaDetails(props) {
-  const { url, title, author, date, explanation } = props;
-  console.log(props.url);
+export default function NasaDetails({ url, title, author, date, explanation }) {
 
-  if (!props.url) return <h3>Loading...</h3>;
+  if (!url) return <h3>Loading...</h3>;
 
   return (
     <StyledDetails className="container">

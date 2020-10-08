@@ -3,6 +3,7 @@ import axios from 'axios'
 import "./App.css";
 import NasaDetail from "./components/NasaDetail"
 import NasaHeader from "./components/NasaHeader"
+import NasaFooter from "./components/NasaFooter"
 
 const myKey = '5WwmxoufDLmWvQcaVXlKGhEoncVjMVLu6iP0ddKn'
 const demoKey = 'DEMO_KEY'
@@ -44,6 +45,7 @@ useEffect(() => {}, [date])
       </p>
       <NasaHeader/>
       <NasaDetail url={nasaData.url} title={nasaData.title} explanation={nasaData.explanation} date={nasaData.date} author={nasaData.copyright}/>
+      <NasaFooter hdURL={nasaData.hdurl}/>
     </div>
   );
 }
