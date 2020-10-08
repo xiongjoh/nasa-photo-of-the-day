@@ -6,7 +6,6 @@ color: ${pr => pr.theme.textColor};
 width: 90%;
 display: flex;
 justify-content: center;
-border: 1px solid red;
 margin: auto;
 
 a {
@@ -14,7 +13,9 @@ a {
     font-size: bold;
     color:${pr => pr.theme.textColor};
     box-shadow: ${pr => pr.theme.boxShadow};
-    padding: 3%;
+    padding: 1%;
+    border-radius: 10%;
+    margin-top: 1%;
 }
 `
 
@@ -22,7 +23,7 @@ export default function NasaFooter(props) {
     const {hdURL} = props
     return (
     <StyledFooter>
-        <a href={hdURL}>View In HD</a>
+        <a href={hdURL} target={'_blank'}>View In HD</a>
     </StyledFooter>
     )
 }

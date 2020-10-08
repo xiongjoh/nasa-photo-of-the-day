@@ -16,6 +16,13 @@ const StyledDetails = styled.div`
     width: 90%;
     margin: auto;
   }
+
+  @media (max-width: 550px) {
+      width: 90%;
+  }
+  @media (max-width: 800px) {
+      width: 75%;
+  }
 `;
 
 export default function NasaDetails({ url, title, author, date, explanation }) {
