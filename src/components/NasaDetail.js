@@ -11,6 +11,7 @@ const StyledDetails = styled.div`
   border-radius: 2%;
   padding: 2% 1%;
   color: ${pr => pr.theme.textColor};
+  font-family: ${pr => pr.theme.fontSansCaption};
 
   img {
     width: 90%;
@@ -20,7 +21,7 @@ const StyledDetails = styled.div`
   @media (max-width: 550px) {
       width: 90%;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
       width: 75%;
   }
 `;
